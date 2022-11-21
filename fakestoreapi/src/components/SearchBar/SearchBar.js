@@ -11,11 +11,11 @@ const SearchBar = (props) => {
     }
 
     const handleClearClick = () => {
-        setSearchValue = ''
+        setSearchValue('')
     }
 
     const filteredProducts = props.products.filter((product) => {
-        return product.includes(searchValue)
+        return product.toLocaleLowerCase().includes(searchValue)
     })
 
     return (
